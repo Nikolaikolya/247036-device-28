@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Nikolai Fedotov](https://up.htmlacademy.ru/htmlcss/28/user/247036).
-* Наставник: `Неизвестно`.
+* Наставник: [Екатерина Чеботарь](https://htmlacademy.ru/profile/id1114443).
 
 ---
 
