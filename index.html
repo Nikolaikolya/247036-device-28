@@ -11,11 +11,13 @@
 </head>
 
 <body>
+
+  <!-- Лучше здесь отсавить заголовок (т.к. будет доп. обертка), или в Хедер?-->
   <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
 
   <!--  Header -->
   <header class="header">
-    
+
     <a class="logo">
       <img class="logo__img" src="" width="163" height="35" alt="Логотип сайта" />
     </a>
@@ -26,9 +28,12 @@
     <!--  Nav -->
     <nav class="nav">
       <div class="user-panel">
+
         <ul class="user-list">
           <li class="user-list__item">Войти</li>
         </ul>
+
+        <!-- Правильно ли здесь список использовать? Название блока пока не придумал. -->
         <ul>
           <li><a href="catalog.html">Сравнить</a></li>
           <li><a href="catalog.html">Корзина</a></li>
@@ -37,20 +42,46 @@
 
       <ul class="nav__list">
         <li class="nav__item">
-          <a href="">доставка</a>
+          <a class="nav__link" href="">доставка</a>
         </li>
         <li class="nav__item">
-          <a href="">гарантии</a>
+          <a class="nav__link" href="">гарантии</a>
         </li>
         <li class="nav__item">
-          <a href="">контакты</a>
+          <a class="nav__link" href="">контакты</a>
         </li>
       </ul>
     </nav>
   </header>
 
   <!--  Main -->
-  <main class="main"></main>
+  <main class="main">
+    <section class="about">
+      <h2 class="about__title">О нас</h2>
+      <p class="about__subtitle">Огромный выбор гаджетов не оставит равнодушным гика,
+        который есть в каждом из нас.</p>
+      <p class="about__subtitle">Мы можем доставить ваш товар в самые отдаленные точки
+        России! DEVICE работает со многими транспортными компаниями:</p>
+
+      <ul class="about__list">
+        <li class="about__item">Деловые линии</li>
+        <li class="about__item">Автотрейдинг</li>
+        <li class="about__item">ЖелДорЭкспедиция</li>
+      </ul>
+
+      <a class="button" href="">подробнее о нас</a>
+    </section>
+
+    <section class="contacts">
+      <h2 class="contacts__title">Контакты</h2>
+      <p class="contacts__subtitle">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
+        проверить работоспособность покупки. Всякое бывает.</p>
+
+      <img class="contacts__images" src="" alt="Карта проезда" width="560" height="222">
+
+      <a class="button" href="">напишите нам</a>
+    </section>
+  </main>
 
   <!--  Footer -->
   <footer class="footer"></footer>
