@@ -42,13 +42,13 @@
 
       <button type="button">Каталог товаров</button>
 
-      <ul>
+      <ul class="menu-list">
         <li><a href="catalog.html">Виртуальная реальность</a></li>
         <li><a href="catalog.html">Моноподы для селфи</a></li>
         <li><a href="catalog.html">Экшн-камеры</a></li>
         <li><a href="catalog.html">Фитнес-браслеты</a></li>
         <li><a href="catalog.html">Умные часы</a></li>
-        <li><a href="slider_and_popular.html">Квадрокоптер</a></li>
+        <li><a href="#">Квадрокоптер</a></li>
       </ul>
 
     </div>
@@ -75,14 +75,14 @@
 
     <h1 class="main__title">Моноподы для селфи</h1>
 
-    <ul class="main-list">
-      <li class="main-list__item">
+    <ul class="main-bradcrams">
+      <li class="main-bradcrams__item">
         <a href="#">Главная</a>
       </li>
-      <li class="main-list__item">
+      <li class="main-bradcrams__item">
         <a href="#">Каталог товаров</a>
       </li>
-      <li class="main-list__item">
+      <li class="main-bradcrams__item">
         <a href="#">Моноподы для селфи</a>
       </li>
     </ul>
@@ -100,13 +100,14 @@
         Сортировка
         <!-- Сортировка -->
       </div>
-      
+
       <div class="catalog-wrapper">
+
         <article class="catalog__item">
           <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Любительская селфи-палка">
           <h3>Любительская селфи-палка <span>500 руб.</span></h3>
 
-          <div class="button-wrapper">
+          <div class="button-hover">
             <button class="button">В корзину</button>
             <button class="button button--product">Добавить к сравнению</button>
           </div>
@@ -119,7 +120,7 @@
             селфи-палка <span>1 500 руб.</span>
           </h3>
 
-          <div class="button-wrapper">
+          <div class="button-hover">
             <button class="button">В корзину</button>
             <button class="button button--product">Добавить к сравнению</button>
           </div>
@@ -129,7 +130,7 @@
           <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Непотопляемая селфи-палка">
           <h3>Непотопляемая селфи-палка <span>2 500 руб.</span></h3>
 
-          <div class="button-wrapper">
+          <div class="button-hover">
             <button class="button">В корзину</button>
             <button class="button button--product">Добавить к сравнению</button>
           </div>
@@ -139,19 +140,21 @@
           <img src="https://via.placeholder.com/360x380" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
           <h3>Селфи-палка «Следуй за мной» <span>4 900 руб.</span></h3>
 
-          <div class="button-wrapper">
+          <div class="button-hover">
             <button class="button">В корзину</button>
             <button class="button button--product">Добавить к сравнению</button>
           </div>
         </article>
+
       </div>
     </section>
+    
   </main>
 
   <footer class="footer">
     <section class="footer-nav">
 
-      <h2>Навигация</h2>
+      <h2 class="visually-hidden">Навигация</h2>
 
       <a class="logo footer-nav__logo" href="">
         <img class="logo__image" src="https://via.placeholder.com/163x35" width="163" height="35" alt="Логотип сайта">
@@ -212,7 +215,9 @@
       </a>
 
     </section>
+
   </footer>
+
 
   <section class="popup popup__map">
     <h2 class="visually-hidden">Карта магазина</h2>
