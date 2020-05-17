@@ -12,54 +12,45 @@
 
 <body class="body">
 
-  <!-- Лучше здесь отсавить заголовок (т.к. будет доп. обертка), или в Хедер?-->
-  <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
-
-  <!--  Header -->
   <header class="header">
 
-    <section>
-      <h2 class="visually-hidden">Главное меню</h2>
-      <a class="logo">
-        <img class="logo__image" src="https://via.placeholder.com/163x35" width="163" height="35" alt="Логотип сайта" />
-      </a>
+    <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
+
+    <a class="logo">
+      <img class="logo__image" src="https://via.placeholder.com/163x35" width="163" height="35" alt="Логотип сайта" />
+    </a>
+
+    <div class="user-menu">
       <!-- Search Panel -->
+
+      <ul class="user-list">
+        <li class="user-list__item">Войти</li>
+      </ul>
+
+      <ul>
+        <li><a href="">Сравнить</a></li>
+        <li><a href="">Корзина</a></li>
+      </ul>
+
+    </div>
+
+    <div class="menu">
 
       <button type="button">Каталог товаров</button>
 
-      <div class="menu">
-        <!-- Что есть сделать список все 6 элементов, а через флекс-бокс ограничить высоту? Можно будет так сделать? -->
-        <ul>
-          <li><a href="catalog.html">Виртуальная реальность</a></li>
-          <li><a href="catalog.html">Моноподы для селфи</a></li>
-          <li><a href="catalog.html">Экшн-камеры</a></li>
-        </ul>
+      <ul>
+        <li><a href="catalog.html">Виртуальная реальность</a></li>
+        <li><a href="catalog.html">Моноподы для селфи</a></li>
+        <li><a href="catalog.html">Экшн-камеры</a></li>
+        <li><a href="catalog.html">Фитнес-браслеты</a></li>
+        <li><a href="catalog.html">Умные часы</a></li>
+        <li><a href="catalog.html">Квадрокоптер</a></li>
+      </ul>
 
-        <ul>
-          <li><a href="catalog.html">Фитнес-браслеты</a></li>
-          <li><a href="catalog.html">Умные часы</a></li>
-        </ul>
+    </div>
 
-        <ul>
-          <li><a href="catalog.html">Квадрокоптер</a></li>
-        </ul>
-      </div>
-    </section>
 
-    <!--  Nav -->
     <nav class="nav">
-      <div class="user-panel">
-
-        <ul class="user-list">
-          <li class="user-list__item">Войти</li>
-        </ul>
-
-        <!-- Правильно ли здесь список использовать? Название блока пока не придумал. -->
-        <ul>
-          <li><a href="">Сравнить</a></li>
-          <li><a href="">Корзина</a></li>
-        </ul>
-      </div>
 
       <ul class="nav__list">
         <li class="nav__item">
@@ -72,52 +63,80 @@
           <a class="nav__link" href="">контакты</a>
         </li>
       </ul>
-    </nav>
-  </header> <!-- ./ Header-->
 
-  <!--  Main -->
+    </nav>
+
+  </header>
+
   <main class="main">
 
-    <section class="about">
-      <h2 class="about__title">О нас</h2>
-      <p class="about__subtitle">Огромный выбор гаджетов не оставит равнодушным гика,
-        который есть в каждом из нас.</p>
-      <p class="about__subtitle">Мы можем доставить ваш товар в самые отдаленные точки
-        России! DEVICE работает со многими транспортными компаниями:</p>
+    <!-- Slider product -->
 
-      <ul class="about__list">
-        <li class="about__item">Деловые линии</li>
-        <li class="about__item">Автотрейдинг</li>
-        <li class="about__item">ЖелДорЭкспедиция</li>
-      </ul>
+    <div class="main-info">
 
-      <a class="button" href="">подробнее о нас</a>
-    </section>
+      <section class="about">
 
-    <section class="contacts">
-      <h2 class="contacts__title">Контакты</h2>
-      <p class="contacts__subtitle">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
-        проверить работоспособность покупки. Всякое бывает.</p>
+        <h2 class="about__title">О нас</h2>
+        <p class="about__subtitle">Огромный выбор гаджетов не оставит равнодушным гика,
+          который есть в каждом из нас.</p>
+        <p class="about__subtitle">Мы можем доставить ваш товар в самые отдаленные точки
+          России! DEVICE работает со многими транспортными компаниями:</p>
 
-      <img class="contacts__images" src="https://via.placeholder.com/560x222" alt="Карта проезда" width="560" height="222">
+        <ul class="about__list">
+          <li class="about__item">Деловые линии</li>
+          <li class="about__item">Автотрейдинг</li>
+          <li class="about__item">ЖелДорЭкспедиция</li>
+        </ul>
 
-      <a class="button" href="">напишите нам</a>
-    </section>
-  </main> <!-- ./ Main -->
+        <a class="button" href="">подробнее о нас</a>
 
-  <!--  Footer -->
+      </section>
+
+      <section class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <p class="contacts__subtitle">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
+          проверить работоспособность покупки. Всякое бывает.</p>
+
+        <img class="contacts__images" src="https://via.placeholder.com/560x222" alt="Карта проезда" width="560"
+          height="222">
+
+        <a class="button" href="">напишите нам</a>
+      </section>
+
+    </div>
+
+  </main>
+
   <footer class="footer">
-    <section class="info">
-      <h2 class="visually-hidden">Данные магазина</h2>
-      <a class="logo info__logo" href="">
+    <section class="footer-nav">
+
+      <h2>Навигация</h2>
+
+      <a class="logo footer-nav__logo" href="">
         <img class="logo__image" src="https://via.placeholder.com/163x35" alt="Логотип сайта" width="163" height="35">
       </a>
 
-      <p class="info__adress">г. Москва, ул. Строителей, 15</p>
+      <div class="user-menu user-menu--footer">
+        
+        <ul class="user-list user-list--footer">
+          <li class="user-list__item">Войти</li>
+        </ul>
+
+        <ul>
+          <li><a href="">Сравнить</a></li>
+          <li><a href="">Корзина</a></li>
+        </ul>
+
+      </div>
+
     </section>
 
-    <section class="footer-nav">
-      <h2>Навигация</h2>
+    <section class="footer-info">
+
+      <h2 class="visually-hidden">Данные магазина</h2>
+
+      <p class="info__adress">г. Москва, ул. Строителей, 15</p>
+      
       <ul class="footer-nav">
         <li class="footer-nav__item">
           <a href="">доставка</a>
@@ -129,33 +148,34 @@
           <a href="">контакты</a>
         </li>
       </ul>
-      <ul class="footer-social">
+
+      <p>Тел.: +7 (495) 495-95-95</p>
+      
+    </section>
+
+    <section class="footer-social">
+      
+      <h2 class="visually-hidden">Социальные сети и автор макета</h2>
+
+      <ul class="footer-social__list">
         <li class="footer-social__item"><a href="">Фейсбук</a></li>
         <li class="footer-social__item"><a href="">Инстаграмм</a></li>
         <li class="footer-social__item"><a href="">Твиттер</a></li>
       </ul>
+
+      <a class="footer-social__link" href="https://htmlacademy.ru/intensive/htmlcss">
+        <img src="https://via.placeholder.com/27x34" alt="Логотип HTML Academy" width="27" height="34">
+      </a>
+
     </section>
-
-    <!-- Название блоку пока не придумал... -->
-    <section>
-      <h2 class="visually-hidden">Телефон и дополнительная информация</h2>
-      <ul>
-        <li><a href="">Войти</a></li>
-        <li><a href="">Сравнить</a></li>
-        <li><a href="">Корзина</a></li>
-      </ul>
-
-      <p>Тел.: +7 (495) 495-95-95</p>
-
-      <img src="https://via.placeholder.com/27x34" alt="Логотип HTML Academy" width="27" height="34">
-    </section>
-  </footer> <!-- ./ Footer-->
+  </footer>
 
   <!-- Popup -->
   <section class="popup popup__map">
     <h2 class="visually-hidden">Карта магазина</h2>
     <a class="popup__map-link" href="">
-      <img class="popup__map-image" src="https://via.placeholder.com/994x593" alt="Карта местонахождения магазина" width="994" height="593">
+      <img class="popup__map-image" src="https://via.placeholder.com/994x593" alt="Карта местонахождения магазина"
+        width="994" height="593">
     </a>
   </section>
 
