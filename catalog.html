@@ -21,7 +21,12 @@
     </a>
 
     <div class="user-menu">
-      <input type="text" name="search" id="search" placeholder="Поиск по сайту" aria-label="Поле для ввода поиска">
+      <form action="https://echo.htmlacademy.ru" method="GET">
+        <label class="visually-hidden" for="search">Поле для ввода поиска по сайту</label>
+        <input type="text" name="search" id="search" placeholder="Поиск по сайту">
+
+        <button class="visually-hidden" type="submit" aria-label="Найти"></button>
+      </form>
 
       <ul class="user-list">
         <li class="user-list__item">
@@ -45,7 +50,7 @@
 
       <ul class="menu-list">
         <li><a href="blank.html">Виртуальная реальность</a></li>
-        <li><a href="catalog.html">Моноподы для селфи</a></li>
+        <li><a href="#">Моноподы для селфи</a></li>
         <li><a href="blank.html">Экшн-камеры</a></li>
         <li><a href="blank.html">Фитнес-браслеты</a></li>
         <li><a href="blank.html">Умные часы</a></li>
@@ -97,8 +102,18 @@
           <fieldset>
             <legend>Стоимость</legend>
 
-            0<input type="range" name="price-value" id="price-value" min="0" max="10000" value="5000" step="100"
-              aria-label="Сортировать по стоимости">10000
+            <div>
+              <p>Результат правого</p>
+              <p>Результат левого</p>
+            </div>
+
+            <div>
+              <input class="range left visually-hidden" type="range" name="price-value-left" min="0" max="10000" value="0" step="100"
+                aria-label="Сортировать по стоимости">
+              <input class="range right visually-hidden" type="range" name="price-value-right" min="0" max="10000" value="5000"
+                step="100" aria-label="Сортировать по стоимости">
+            </div>
+
           </fieldset>
 
           <fieldset aria-label="Выбор цвета">
@@ -145,7 +160,7 @@
             <legend>Bluetooth</legend>
 
             <label for="bluetooth-yes">
-              <input type="radio" name="bluetooth" id="bluetooth-yes" value="yes">
+              <input type="radio" name="bluetooth" id="bluetooth-yes" value="yes" checked>
               Есть
             </label>
 
@@ -167,13 +182,13 @@
 
           <ul>
             <li>
-              <button type="button">По цене</button>
+              <a href="#" type="button">По цене</a>
             </li>
             <li>
-              <button type="button">По типу</button>
+              <a href="#" type="button">По типу</a>
             </li>
             <li>
-              <button type="button">По популярности</button>
+              <a href="#" type="button">По популярности</a>
             </li>
           </ul>
 

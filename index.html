@@ -16,12 +16,17 @@
 
     <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
 
-    <a class="logo" href="">
+    <a class="logo" href="#">
       <img class="logo__image" src="img/logo.png" width="163" height="35" alt="Логотип сайта">
     </a>
 
     <div class="user-menu">
-      <input type="text" name="search" id="search" placeholder="Поиск по сайту" aria-label="Поле для ввода поиска">
+      <form action="https://echo.htmlacademy.ru" method="GET">
+        <label class="visually-hidden" for="search">Поле для ввода поиска по сайту</label>
+        <input type="text" name="search" id="search" placeholder="Поиск по сайту">
+
+        <button class="visually-hidden" type="submit" aria-label="Найти"></button>
+      </form>
 
       <ul class="user-list">
         <li class="user-list__item">
@@ -279,10 +284,14 @@
 
     <section class="pathners">
       <h2 class="visually-hidden">Партнеры</h2>
-      <img class="pathners__img" src="img/parthners/logo-1.png" width="260" height="100" alt="Логотип партнера">
-      <img class="pathners__img" src="img/parthners/logo-2.png" width="260" height="100" alt="Логотип партнера">
-      <img class="pathners__img" src="img/parthners/logo-3.png" width="260" height="100" alt="Логотип партнера">
-      <img class="pathners__img" src="img/parthners/logo-4.png" width="260" height="100" alt="Логотип партнера">
+      <a href="blank.html"><img class="pathners__img" src="img/parthners/logo-1.png" width="260" height="100"
+          alt="Логотип партнера"></a>
+      <a href="blank.html"><img class="pathners__img" src="img/parthners/logo-2.png" width="260" height="100"
+          alt="Логотип партнера"></a>
+      <a href="blank.html"><img class="pathners__img" src="img/parthners/logo-3.png" width="260" height="100"
+          alt="Логотип партнера"></a>
+      <a href="blank.html"><img class="pathners__img" src="img/parthners/logo-4.png" width="260" height="100"
+          alt="Логотип партнера"></a>
     </section>
 
     <div class="main-info">
@@ -408,7 +417,7 @@
 
       <label for="form-email">
         Ваш e-mail:
-        <input type="text" name="name" id="form-email" placeholder="email@example.com">
+        <input type="email" name="email" id="form-email" placeholder="email@example.com">
       </label>
 
       <label for="form-description">
