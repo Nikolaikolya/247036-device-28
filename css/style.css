@@ -1,11 +1,257 @@
+/* ========  Font ======== */
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/fonts/web/opensans.woff2") format("woff2"),
+        url("/fonts/web/opensans.woff2") format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url("/fonts/web/opensanslight.woff2") format("woff2"),
+        url("/fonts/web/opensanslight.woff2") format("woff");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Gilroy Bold';
+    src: url("/fonts/web/gilroyextrabold.woff2") format("woff2"),
+        url("/fonts/web/gilroyextrabold.woff") format("woff");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Gilroy Light';
+    src: url("/fonts/web/gilroylight.woff2") format("woff2"),
+        url("/fonts/web/gilroylight.woff") format("woff");
+    font-weight: 300;
+}
+
+/* ======== Variabels ======== */
+:root {
+    --color-white: #ffffff;
+    --color-black: #000000;    
+    --color-dark: #363636;
+    --color-gray: #464646;
+    --color-half-gray: #7E7E7E;
+    --color-light-gray: #E5E5E5;
+    --color-yellow: #F7E296;
+    --color-dark-yellow: #F0C52E;
+    --color-green: #91C92F;
+
+    --special: #F6DADA;
+
+    --open-sans-light: 'Open Sans Light', 'Arial', sans-serif;
+    --open-sans: 'Open Sans', 'Arial', sans-serif;
+    --gilroy-bold: 'Gilroy Bold', 'Arial Black', sans-serif;
+    --gilroy-light: 'Gilroy Light', 'Arial Black', sans-serif;
+}
+
+
 /* ========  Global ======== */
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: var(--open-sans);
+    font-size: 15px;
+
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
     margin: -1px;
-    border: 0;
     padding: 0;
+
+    border: 0;
     overflow: hidden;
     clip: rect(0 0 0 0);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* ========  Container ======== */
+.container {
+    width: 1240px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ========  Header ======== */
+.header {
+    min-height: 300px;
+
+    padding: 0 60px;
+    margin-top: 40px;
+
+    background-color: var(--color-yellow);
+}
+
+/* ========  Logo ======== */
+.logo {
+}
+
+.logo__image {
+    margin-top: -20px;
+}
+
+/* ========  search-input ======== */
+.search-input {
+    border: none;
+    background-color: transparent;
+
+    font-family: var(--open-sans);
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.3);
+    line-height: 20px;
+}
+
+.search-input:hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.search-input:focus {
+    color: var(--color-black);
+}
+
+.search-input:hover::-webkit-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.search-input:focus::-webkit-placeholder {
+    color: var(--color-black);
+}
+
+.search-input:hover::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.search-input:focus::-moz-placeholder {
+    color: var(--color-black);
+}
+
+/* ========  User Menu ======== */
+.user-menu {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-list {
+    margin: 0;
+    padding: 0;
+}
+
+
+.slider__images {
+    margin-left: 49px;
+}
+
+.user-menu__link {
+    color: var(--color-black);
+}
+
+.user-menu__link:hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.user-menu__link:focus {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+/* ========  Nav ======== */
+
+/* ========  Menu ======== */
+.menu-list {
+    display: block;
+}
+
+.menu-button {
+    display: inline;
+}
+
+
+/* ========  Button ======== */
+.button {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 220px;
+    height: 40px;
+
+    font-family: var(--gilroy-bold);
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 22px;
+
+    border: none;
+    background-color: var(--color-white);
+    cursor: pointer;
+
+    transition: height .2s linear;
+}
+
+.button::before {
+    background-color: var(--color-dark-yellow);
+    content: '';
+    width: 220px;
+    height: 8px;
+    position: absolute;
+    z-index: -1;
+
+    transition: all .2s linear;
+}
+
+.button:hover::before {
+    height: 40px;
+}
+
+.button:focus::before {
+    height: 40px;
+}
+
+.button:active {
+    outline: none;
+    color: rgba(0, 0, 0, .3);
+}
+
+.button:active .btn__text {
+    border: none;
+    opacity: .3;
+}
+
+
+
+
+
+/* ========  Popup ======== */
+
+.popup {
+    display: none;
 }
