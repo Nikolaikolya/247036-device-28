@@ -116,37 +116,37 @@
 
             </fieldset>
 
-            <fieldset aria-label="Выбор цвета">
+            <fieldset class="select-color" aria-label="Выбор цвета">
               <legend>Цвет</legend>
 
-              <ul>
+              <ul class="select-color__list">
 
-                <li>
+                <li class="select-color__item">
                   <label for="input-black">
                     <input type="checkbox" id="input-black" name="black" checked>
                     Чёрный
                   </label>
                 </li>
 
-                <li>
+                <li class="select-color__item">
                   <label for="input-white">
                     <input type="checkbox" id="input-white" name="white">
                     Белый
                   </label>
                 </li>
-                <li>
+                <li class="select-color__item">
                   <label for="input-blue">
                     <input type="checkbox" id="input-blue" name="blue" checked>
                     Синий
                   </label>
                 </li>
-                <li>
+                <li class="select-color__item">
                   <label for="input-red">
                     <input type="checkbox" id="input-red" name="red" checked>
                     Красный
                   </label>
                 </li>
-                <li>
+                <li class="select-color__item">
                   <label for="input-pink">
                     <input type="checkbox" id="input-pink" name="pink">
                     Розовый
@@ -245,20 +245,23 @@
             </article>
 
           </div>
+
+          <div class="catalog-footer" aria-label="Навигация по старнице каталога">
+            <a class="catalog-footer__link" href="#">Назад</a>
+    
+            <ol class="catalog-footer__list">
+              <li><a class="catalog-footer__page--active" href="#">1</a></li>
+              <li><a class="catalog-footer__page" href="#">2</a></li>
+              <li><a class="catalog-footer__page" href="#">3</a></li>
+            </ol>
+    
+            <a class="catalog-footer__link" href="#">Вперед</a>
+          </div>
+
         </section>
       </div>
 
-      <div class="main-footer" aria-label="Навигация по старнице каталога">
-        <button class="button" type="button">Назад</button>
-
-        <ol>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-        </ol>
-
-        <button class="button" type="button">Вперед</button>
-      </div>
+      
 
     </main>
 

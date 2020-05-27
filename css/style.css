@@ -57,6 +57,7 @@ body {
 
   font-family: var(--open-sans);
   font-size: 15px;
+  line-height: 20px;
 
   background-color: var(--color-white);
   color: var(--color-black);
@@ -269,6 +270,70 @@ li {
   line-height: 28px;
 }
 
+/* ========  Slider ======== */
+.slider-content__title {
+  font-family: var(--gilroy-bold);
+  font-size: 47px;
+  line-height: 58px;
+}
+
+.slider-table__line:first-child {
+  font-family: var(--gilroy-light);
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.1em;
+}
+
+.slider-table__line:last-child {
+  font-family: var(--gilroy-light);
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+
+/* ========  Popular List ======== */
+.popular-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.popular-list__item {
+  margin-right: 40px;
+}
+
+.popular-list__title {
+  font-family: var(--gilroy-bold);
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  color: var(--color-black);
+}
+
+.popular-list__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 160px;
+  height: 160px;
+
+  background-color: var(--color-yellow);
+}
+
+/* ========  Services ======== */
+.services-info__title {
+  font-family: var(--gilroy-bold);
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+}
+
+.services-info__subtitle {
+  line-height: 30px;
+  letter-spacing: 0.1em;
+}
+
 /* ========  About ======== */
 .about {
   height: 580px;
@@ -369,6 +434,14 @@ li {
   display: flex;
 }
 
+.catalog-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-top: 66px;
+  padding-left: 63px;
+}
+
 .catalog-header {
   background-color: #e5e5e5;
 }
@@ -378,6 +451,14 @@ li {
   line-height: 20px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.catalog-item {
+  width: 360px;
+}
+
+.catalog-item:nth-child(2n) {
+  margin-left: 49px;
 }
 
 .catalog-list__link {
@@ -396,19 +477,73 @@ li {
 }
 
 .catalog-item__title {
+  max-width: 360px;
+
   font-family: var(--gilroy-bold);
-  font-family: 18px;
+  font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.05em;
 }
 
 .catalog-item__title span {
+
   font-family: var(--gilroy-light);
-  font-family: 16px;
+  font-size: 16px;
   line-height: 18px;
   font-weight: 300;
   letter-spacing: 0.05em;
 }
+
+.catalog-footer {
+  width: 760px;
+  margin-left: 63px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--color-light-gray);
+}
+
+.catalog-footer__link {
+  width: 120px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--gilroy-bold);
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.catalog-footer__link:hover {
+  background-color: #d9d9d9;
+}
+
+.catalog-footer__link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-footer__list {
+  display: flex;
+}
+
+.catalog-footer__page {
+  color: var(--color-black);
+  opacity: 0.3;
+}
+
+.catalog-footer__page--active {
+  color: var(--color-black);
+  opacity: 1;
+}
+
+/* ========  Main ======== */
 
 /* ========  Link Add Catalog ======== */
 .link-add {
@@ -438,7 +573,16 @@ li {
 
 /* ========  Main Filter ======== */
 .main-filter {
+  min-width: 268px;
+
   background-color: #e5e5e5;
+}
+
+.main-filter legend {
+  font-family: var(--gilroy-bold);
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
 }
 
 .main-filter__title {
@@ -448,6 +592,12 @@ li {
   text-transform: uppercase;
 
   background-color: #dcdcdc;
+}
+
+
+.select-color__item {
+  font-size: 14px;
+  line-height: 19px;
 }
 
 /* ========  Main Bradcrams ======== */
@@ -493,7 +643,7 @@ li {
   letter-spacing: 0.2em;
 
   border: none;
-  background-color: var(--color-white);
+  background-color: transparent;
   cursor: pointer;
 
   transition: height 0.2s linear;
@@ -525,6 +675,8 @@ li {
 }
 
 .button:active {
+  outline: none;
+
   color: rgba(0, 0, 0, 0.3);
 }
 
