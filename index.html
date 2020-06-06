@@ -17,7 +17,7 @@
     
       <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
     
-      <a class="logo" href="#">
+      <a class="logo">
         <img class="logo__image" src="img/logo.png" width="163" height="35" alt="Логотип сайта">
       </a>
     
@@ -45,22 +45,10 @@
     
       </div>
       <div class="nav-wrapper">
-        <div class="menu">
-    
-          <a class="nav__link" href="#">Каталог товаров</a>
-    
-          <ul class="menu-list">
-            <li><a class="menu-list__link" href="blank.html">Виртуальная реальность</a></li>
-            <li><a class="menu-list__link" href="catalog.html">Моноподы для селфи</a></li>
-            <li><a class="menu-list__link" href="blank.html">Экшн-камеры</a></li>
-            <li><a class="menu-list__link" href="blank.html">Фитнес-браслеты</a></li>
-            <li><a class="menu-list__link" href="blank.html">Умные часы</a></li>
-            <li><a class="menu-list__link" href="blank.html">Квадрокоптер</a></li>
-          </ul>
-    
-        </div>
     
         <nav class="nav">
+
+          <a class="catalog-button" href="#">Каталог товаров</a>
     
           <ul class="nav__list">
             <li class="nav__item">
@@ -75,6 +63,22 @@
           </ul>
     
         </nav>
+      </div>
+      
+      <div class="catalog-menu">
+        <ul class="menu-list">
+          <li><a class="menu-list__link" href="blank.html">Виртуальная реальность</a></li>
+          <li><a class="menu-list__link" href="catalog.html">Моноподы</br> для селфи</a></li>
+          <li><a class="menu-list__link" href="blank.html">Экшн-камеры</a></li>
+        </ul>
+  
+        <ul class="menu-list">
+          <li><a class="menu-list__link" href="blank.html">Фитнес-браслеты</a></li>
+          <li><a class="menu-list__link" href="blank.html">Умные часы</a></li>
+        </ul>
+        <ul class="menu-list">
+          <li><a class="menu-list__link" href="blank.html">Квадрокоптер</a></li>
+        </ul>
       </div>
     
     </header>
@@ -95,14 +99,13 @@
       
             <div class="slider-content">
       
-              <p class="slider-content__title">Делай селфи, <span class="slider-content__number">01</span>
-                как Бен Стиллер!</p>
+              <p class="slider-content__title">Делай селфи, <br>как Бен Стиллер!</p>
               <p class="slider-content__subtitle">Самая длинная палка для селфи доступна в нашем
                 магазине.Восемь
                 (Восемь,
                 Карл!) метров длиной и весом всего 5 килограмм.</p>
-              <div class="slider-content__control visually-hidden">
-                <a class="button slider-content__link" href="catalog.html">Подробнее</a>
+              <div class="slider-content__control">
+                <a class="button button--big slider-content__link" href="catalog.html">Подробнее</a>
       
                 <ul class="slider-control">
                   <li class="slider-control__item"><button type="button">Слайдер 1</button></li>
@@ -124,6 +127,8 @@
                   <td>Материал</td>
                 </tr>
               </table>
+
+              <span class="slider-content__number">01</span>
             </div>
           </li>
       
@@ -157,6 +162,7 @@
                   <td>Без подзарядки</td>
                 </tr>
               </table>
+              <span class="slider-content__number">02</span>              
             </div>
           </li>
       
@@ -193,6 +199,7 @@
                   <td>Радиус поражения</td>
                 </tr>
               </table>
+              <span class="slider-content__number">03</span>
             </div>
           </li>
       
@@ -277,13 +284,13 @@
         <div class="services-wrapper">
           <ul class="services-button">
             <li>
-              <button class="button" type="button">Доставка</button>
+              <button class="button button--small" type="button">Доставка</button>
             </li>
             <li>
-              <button class="button" type="button">Гарантия</button>
+              <button class="button button--small" type="button">Гарантия</button>
             </li>
             <li>
-              <button class="button" type="button">Кредит</button>
+              <button class="button button--small" type="button">Кредит</button>
             </li>
           </ul>
         
@@ -294,9 +301,7 @@
                 <div class="services-content">
                   <h3 class="services-info__title">Доставка</h3>
                   <p class="services-info__subtitle">Мы с удовольствием доставим ваш товар прямо к
-                    вашему подъезду
-                    совершенно
-                    бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                    вашему подъезду совершенно бесплатно! Ведь мы&nbsp;неплохо заработаем, поднимая его на ваш этаж.</p>
                 </div>
         
                 <img class="services-info__images" src="img/svg/delivery.svg" width="136" height="164"
@@ -392,7 +397,7 @@
 
   <footer class="footer">
 
-    <div class="container">
+    <div class="container container--footer">
       <div class="footer-nav">
 
         <a class="logo footer-nav__logo" href="">
