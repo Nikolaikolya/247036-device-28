@@ -1,0 +1,56 @@
+[
+  {
+    "type": "stylesheet-connect-correct"
+  },
+  {
+    "type": "stylesheet-in-head"
+  },
+  {
+    "type": "validation"
+  },
+  {
+    "type": "stylesheet-single"
+  },
+  {
+    "type": "important"
+  },
+  {
+    "type": "alternative-font"
+  },
+  {
+    "type": "project-structure"
+  },
+  {
+    "type": "img-size"
+  },
+  {
+    "type": "mandatory-labels"
+  },
+  {
+    "type": "tel"
+  },
+  {
+    "type": "normalize"
+  },
+  {
+    "type": "css-id-usage"
+  },
+  {
+    "type": "vertical-align"
+  },
+  {
+    "type": "script-before-body"
+  },
+  {
+    "type": "script-file-before-body"
+  },
+  {
+    "type": "mandatory-img-alt-attribute"
+  },
+  {
+    "type": "script-minified"
+  },
+  {
+    "type": "stylesheet-minified"
+  }
+]
