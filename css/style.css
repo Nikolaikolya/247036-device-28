@@ -124,6 +124,10 @@ a {
   background-color: var(--color-yellow);
 }
 
+.header--catalog {
+  height: auto;
+}
+
 /* ========  Logo ======== */
 .logo {
   cursor: pointer;
@@ -271,6 +275,8 @@ a {
 .user-list {
   margin: 0;
   padding: 0;
+
+  display: flex;
 }
 
 .user-list--footer {
@@ -289,7 +295,7 @@ a {
   color: var(--color-black);
 }
 
-.user-menu__link::before {
+.user-list__item:first-child .user-menu__link::before {
   content: "";
 
   width: 13px;
@@ -303,7 +309,11 @@ a {
   background-repeat: no-repeat;
 }
 
-.user-menu__link--footer::before {
+.user-list__item:last-child {
+  opacity: var(--opacity-30);
+}
+
+.user-list__item:first-child .user-menu__link--footer::before {
   background-image: url(../img/svg/footer/icon_user.svg);
 }
 
@@ -465,6 +475,10 @@ a {
   z-index: 1000;
 
   background-color: var(--color-yellow);
+}
+
+.catalog-menu--catalog-page {
+  bottom: -115px;
 }
 
 .menu-list {
@@ -963,12 +977,12 @@ a {
   width: 560px;
 }
 
-.contacts__images {
-  margin-bottom: 70px;
-}
-
 .contacts__link {
-  outline: none;
+  width: 100%;
+  margin-bottom: 70px;
+
+  display: block;
+
   cursor: pointer;
 }
 
@@ -1151,8 +1165,8 @@ a {
   display: flex;
   flex-wrap: wrap;
 
-  padding-top: 66px;
-  padding-left: 63px;
+  padding-top: 70px;
+  padding-left: 73px;
 
   background-color: #fff;
 }
@@ -1160,7 +1174,7 @@ a {
 .catalog-header {
   height: 70px;
   width: 100%;
-  padding-left: 63px;
+  padding-left: 75px;
 
   display: flex;
   align-items: center;
@@ -1175,7 +1189,7 @@ a {
 }
 
 .catalog-header__title {
-  margin-right: 74px;
+  margin-right: 73px;
 
   font-size: 16px;
   line-height: 20px;
@@ -1189,6 +1203,7 @@ a {
 
 .catalog-item figure {
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
 
   position: relative;
@@ -1206,7 +1221,7 @@ a {
 }
 
 .catalog-item:nth-child(2n) {
-  margin-left: 49px;
+  margin-left: 40px;
 }
 
 .catalog-list {
@@ -1238,6 +1253,7 @@ a {
 
 .catalog-item__title {
   max-width: 360px;
+  margin-bottom: 45px;
 
   font-family: var(--gilroy-bold);
   font-size: 18px;
@@ -1255,6 +1271,7 @@ a {
 
 .catalog-footer {
   width: 760px;
+  margin-bottom: 78px;
 
   display: flex;
   align-items: center;
@@ -1408,8 +1425,25 @@ a {
   list-style-type: none;
 }
 
+.main-bradcrams__item {
+  position: relative;
+}
+
 .main-bradcrams__item:not(:last-child) {
   padding-right: 40px;
+}
+
+.main-bradcrams__item:not(:last-child)::after {
+  content: '';
+
+  width: 4px;
+  height: 7px;
+  position: absolute;
+  top: 40%;
+  right: 20px;
+
+  background-image: url(../img/svg/nav-arrow.svg);
+  background-repeat: no-repeat;
 }
 
 .main-bradcrams a {
