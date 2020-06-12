@@ -23,4 +23,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm init -y
     - run: npm install @htmlacademy/autocheck
-    - run: node_modules/.bin/autocheck -c ./.github/settings/checks.json
+    - run: FORCE_COLOR=1 node_modules/.bin/autocheck -c ./.github/settings/checks.json
