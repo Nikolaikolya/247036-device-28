@@ -1547,7 +1547,8 @@ a {
 }
 
 .range-controls .bar {
-  width: 70%;
+  width: 60%;
+  margin-left: 0%;
   height: 2px;
 
   position: absolute;
@@ -1588,12 +1589,15 @@ a {
   width: 60px;
   background-color: var(--color-light-gray);
 
-  font-family: inherit;
   font-size: inherit;
 }
 
 .range-controls .toggle-max {
   left: 120px;
+}
+
+.range-controls .toggle-min {
+  left: 0px;
 }
 
 /* ========  Main Filter Checkbox Controls ======== */
