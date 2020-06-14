@@ -38,7 +38,7 @@
             <li class="user-list__item">
               <a class="user-menu__link" href="blank.html">Валентин Петухов</a>
             </li>
-            <li class="user-list__item">
+            <li class="user-list__item user-list__item--transparent">
               <a class="user-menu__link" href="blank.html">Выйти</a>
             </li>
           </ul>
@@ -154,16 +154,23 @@
             <fieldset class="main-form__price">
               <legend>Стоимость</legend>
 
-              <div>
-                <p>Результат правого</p>
-                <p>Результат левого</p>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="width: 60%; margin-left: 0%"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0" style="left: 0%"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
               </div>
 
-              <div>
-                <input class="range left visually-hidden" type="range" name="price-value-left" min="0" max="10000"
-                  value="0" step="100" aria-label="Сортировать по стоимости">
-                <input class="range right visually-hidden" type="range" name="price-value-right" min="0" max="10000"
-                  value="5000" step="100" aria-label="Сортировать по стоимости">
+              <div class="price-controls">
+                <label class="min-price">
+                  от <input type="number" name="min-price" value="0" step="100">
+                </label>
+                <label class="min-price">
+                  до <input type="number" name="max-price" value="5000" step="100">
+                </label>
               </div>
 
             </fieldset>
@@ -174,33 +181,38 @@
               <ul class="select-color__list">
 
                 <li class="select-color__item">
-                  <label for="input-black">
-                    <input type="checkbox" id="input-black" name="black" checked>
+                  <label class="check option">
+                    <input class="check__input" type="checkbox" name="black">
+                    <span class="check__box check__box--image"></span>
                     Чёрный
                   </label>
                 </li>
 
                 <li class="select-color__item">
-                  <label for="input-white">
-                    <input type="checkbox" id="input-white" name="white">
+                  <label class="check option">
+                    <input class="check__input" type="checkbox" name="white" checked>
+                    <span class="check__box check__box--image"></span>
                     Белый
                   </label>
                 </li>
                 <li class="select-color__item">
-                  <label for="input-blue">
-                    <input type="checkbox" id="input-blue" name="blue" checked>
+                  <label class="check option">
+                    <input class="check__input" type="checkbox" name="blue" checked>
+                    <span class="check__box check__box--image"></span>
                     Синий
                   </label>
                 </li>
                 <li class="select-color__item">
-                  <label for="input-red">
-                    <input type="checkbox" id="input-red" name="red" checked>
+                  <label class="check option">
+                    <input class="check__input" type="checkbox" name="red" checked>
+                    <span class="check__box check__box--image"></span>
                     Красный
                   </label>
                 </li>
                 <li class="select-color__item">
-                  <label for="input-pink">
-                    <input type="checkbox" id="input-pink" name="pink">
+                  <label class="check option">
+                    <input class="check__input" type="checkbox" name="pink">
+                    <span class="check__box check__box--image"></span>
                     Розовый
                   </label>
                 </li>
@@ -211,15 +223,25 @@
             <fieldset class="main-form__bluetooth">
               <legend>Bluetooth</legend>
 
-              <label for="bluetooth-yes">
-                <input type="radio" name="bluetooth" id="bluetooth-yes" value="yes" checked>
-                Есть
-              </label>
+              <ul class="select-color__list">
+                <li class="select-color__item">
+                  <label class="radio option">
+                    <input class="radio__input" type="radio" name="bluetooth" value="yes" checked>
+                    <span class="radio__box radio__box--image"></span>
+                    Есть
+                  </label>
+                </li>
+                <li class="select-color__item">
+                  <label class="radio option">
+                    <input class="radio__input" type="radio" name="bluetooth" value="no">
+                    <span class="radio__box radio__box--image"></span>
+                    Нет
+                  </label>
+                </li>
+              </ul>
 
-              <label for="bluetooth-no">
-                <input type="radio" name="bluetooth" id="bluetooth-no" value="no">
-                Нет
-              </label>
+
+
             </fieldset>
 
             <button class="button" type="submit">Показать</button>
@@ -242,7 +264,10 @@
                 </div>
 
               </figure>
-              <h3 class="catalog-item__title">Любительская селфи-палка <span>500 руб.</span></h3>
+              <div class="catalog-title">
+                <h3 class="catalog-item__title">Любительская селфи-палка</h3>
+                <span>500 руб.</span>
+              </div>
 
             </article>
 
@@ -255,10 +280,10 @@
                   <a class="link-add" href="#">Добавить к сравнению</a>
                 </div>
               </figure>
-
-              <h3 class="catalog-item__title">Профессиональная
-                селфи-палка <span>1 500 руб.</span>
-              </h3>
+              <div class="catalog-title">
+                <h3 class="catalog-item__title">Профессиональная<br>селфи-палка</h3>
+                <span>1 500 руб.</span>
+              </div>
             </article>
 
             <article class="catalog-item">
@@ -270,26 +295,35 @@
                   <a class="link-add" href="#">Добавить к сравнению</a>
                 </div>
               </figure>
-              <h3 class="catalog-item__title">Непотопляемая селфи-палка <span>2 500 руб.</span></h3>
+              <div class="catalog-title">
+                <h3 class="catalog-item__title">Непотопляемая селфи-палка</h3>
+                <span>2 500 руб.</span>
+              </div>
             </article>
 
-            <article class="catalog-item">
+            <article class="catalog-item catalog-item--new">
               <figure>
                 <img src="img/catalog/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                <p class="catalog-item__deco">
+                  <span>new</span>
+                </p>
                 <div class="button-hover">
                   <button class="button">В корзину</button>
                   <a class="link-add" href="#">Добавить к сравнению</a>
                 </div>
               </figure>
 
-              <h3 class="catalog-item__title">Селфи-палка «Следуй за мной» <span>4 900 руб.</span></h3>
+              <div class="catalog-title">
+                <h3 class="catalog-item__title">Селфи-палка «Следуй за мной»</h3>
+                <span>4 900 руб.</span>
+              </div>
             </article>
 
             <div class="catalog-footer">
               <a class="catalog-footer__link" href="#">Назад</a>
 
               <ol class="catalog-footer__list">
-                <li><a class="catalog-footer__page--active" href="#">1</a></li>
+                <li><a class="catalog-footer__page catalog-footer__page--active" href="#">1</a></li>
                 <li><a class="catalog-footer__page" href="#">2</a></li>
                 <li><a class="catalog-footer__page" href="#">3</a></li>
               </ol>
@@ -317,7 +351,10 @@
         <div class="user-nemu--footer">
           <ul class="user-list">
             <li class="user-list__item">
-              <a class="user-menu__link user-menu__link--footer" href="blank.html">Войти</a>
+              <a class="user-menu__link user-menu__link--footer" href="blank.html">Валентин Петухов</a>
+            </li>
+            <li class="user-list__item">
+              <a class="user-menu__link user-menu__link--footer" href="blank.html">Выйти</a>
             </li>
           </ul>
 
@@ -386,11 +423,10 @@
   <!-- Popup -->
   <section class="popup popup__map">
     <h2 class="visually-hidden">Карта магазина</h2>
-      <iframe
-        class="popup__map-image"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2228.838697654174!2d92.90292580105131!3d56.03878167502107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5cd7af06d08ecd35%3A0x8ae8baf795c484f!2z0J7QsdGJ0LXRgdGC0LLQviDQoSDQntCz0YDQsNC90LjRh9C10L3QvdC-0Lkg0J7RgtCy0LXRgtGB0YLQstC10L3QvdC-0YHRgtGM0Y4g0KHQvyAi0JrRg9GA0YEg0KPQvdC40LLQtdGA0YHQsNC7INCh0LXRgNCy0LjRgSI!5e0!3m2!1sru!2sru!4v1591697980228!5m2!1sru!2sru"
-        width="994" height="593" title="Карта офиса по адресу улица Строителей, 15">
-      </iframe>
+    <iframe class="popup__map-image"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2228.838697654174!2d92.90292580105131!3d56.03878167502107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5cd7af06d08ecd35%3A0x8ae8baf795c484f!2z0J7QsdGJ0LXRgdGC0LLQviDQoSDQntCz0YDQsNC90LjRh9C10L3QvdC-0Lkg0J7RgtCy0LXRgtGB0YLQstC10L3QvdC-0YHRgtGM0Y4g0KHQvyAi0JrRg9GA0YEg0KPQvdC40LLQtdGA0YHQsNC7INCh0LXRgNCy0LjRgSI!5e0!3m2!1sru!2sru!4v1591697980228!5m2!1sru!2sru"
+      width="994" height="593" title="Карта офиса по адресу улица Строителей, 15">
+    </iframe>
     <button class="popup-button" type="button" aria-label="Закрыть форму">
       <img src="img/svg/modal-close.svg" width="55" height="55" alt="Закрыть форму">
     </button>
@@ -418,7 +454,8 @@
       <label class="form-description" for="form-description">
         Текст письма:
         <br>
-        <textarea class="description" name="description" id="form-description" placeholder="В свободной форме"></textarea>
+        <textarea class="description" name="description" id="form-description"
+          placeholder="В свободной форме"></textarea>
       </label>
 
       <button class="button button--small" type="submit">Отправить</button>
@@ -428,7 +465,7 @@
     </form>
   </section>
 
-  <script src="js/index.js"></script>
+  <!--script src="js/index.js"></script-->
   <script src="js/header-menu.js"></script>
 </body>
 

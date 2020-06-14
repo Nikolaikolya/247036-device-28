@@ -7,7 +7,13 @@ let searchForm = document.querySelector(".search-form");
 buttonCatalog.addEventListener("mouseover", function (event) {
     if (event.target == buttonCatalog || event.target == catalogMenu) {
       catalogMenu.style.display = "flex";
+    } else {
+      catalogMenu.style.display = "block";
     }
+  });
+
+  buttonCatalog.addEventListener("mouseout", function(event) {
+    catalogMenu.style.display = "none";
   });
   
   catalogMenu.addEventListener('mouseover', function(event) {

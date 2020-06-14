@@ -7,16 +7,14 @@ let popupMapShow = document.querySelector(".contacts__link");
 let inputName = document.querySelector('.input-name');
 let formWrite = document.querySelector('.form-write');
 let poupMapClose = document.querySelector(".popup__map .popup-button");
-
-
-
 let searchInput = document.querySelector(".search-input");
-
 let buttonSliderIndex = document.querySelectorAll('.slider-control__item button');
 let sliderList = document.querySelector('.slider-list');
 let sliderListItem = document.querySelectorAll('.slider-list > li');
 let servicesButton = document.querySelectorAll('.services-button button');
 let servicesSliderItem = document.querySelectorAll('.services-list__item');
+let contactsLink = document.querySelector('.contacts__link');
+let contactsButtonWrite = document.querySelector('.contacts .button--big');
 
 
 // Show slider for block services
@@ -45,7 +43,7 @@ function toggleClassButton(array, elementClass) {
 
 function toggleSliderServices(element, className) {
   servicesSliderItem.forEach((elem, index) => {
-    elem.classList.remove('services-list__item--current');
+    elem.classList.remove(className);
   });
 
   element.classList.add(className);
@@ -99,8 +97,21 @@ popupWriteShow.addEventListener("click", function (event) {
   inputName.focus();
 });
 
-formWrite.addEventListener('submit', function(event) {
-  event.preventDefault();
+contactsLink.addEventListener('focus', function(event) {
+  contactsLink.addEventListener('keydown', function(event) {
+    if(event.keyCode === 32) {
+      popupMap.style.display = "block";
+    }
+  });
+});
+
+contactsButtonWrite.addEventListener('focus', function(event) {
+  contactsButtonWrite.addEventListener('keydown', function(event) {
+    if(event.keyCode === 32) {
+      popupWrite.style.display = "block";
+      inputName.focus();
+    }
+  });
 });
 
 window.addEventListener('keydown', function(event) {
