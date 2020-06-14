@@ -132,9 +132,9 @@
               </ul>
             </div>
 
-            <div class="button_wrapper">
-              <button type="button">Вверх</button>
-              <button type="button">В низ</button>
+            <div class="button-wrapper">
+              <button class="button--up" type="button" aria-label="Сортировать от большего к меньшему"></button>
+              <button class="button--down" type="button" aria-label="Сортировать от меньшему к большего"></button>
             </div>
 
           </div>
@@ -255,12 +255,11 @@
 
             <article class="catalog-item">
 
-
-              <figure>
+              <figure tabindex="0">
                 <img src="img/catalog/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
                 <div class="button-hover">
-                  <button class="button">В корзину</button>
-                  <a class="link-add" href="#">Добавить к сравнению</a>
+                  <button class="button" tabindex="0">В корзину</button>
+                  <a class="link-add" href="#" tabindex="0">Добавить к сравнению</a>
                 </div>
 
               </figure>
@@ -272,7 +271,7 @@
             </article>
 
             <article class="catalog-item">
-              <figure>
+              <figure tabindex="0">
                 <img src="img/catalog/item-2.jpg" width="360" height="380" alt="Профессиональная 
                   селфи-палка">
                 <div class="button-hover">
@@ -287,7 +286,7 @@
             </article>
 
             <article class="catalog-item">
-              <figure>
+              <figure tabindex="0">
                 <img src="img/catalog/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
 
                 <div class="button-hover">
@@ -302,7 +301,7 @@
             </article>
 
             <article class="catalog-item catalog-item--new">
-              <figure>
+              <figure tabindex="0">
                 <img src="img/catalog/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                 <p class="catalog-item__deco">
                   <span>new</span>

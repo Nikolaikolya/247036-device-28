@@ -600,6 +600,8 @@ a {
 }
 
 .slider-none {
+  min-height: 508px;
+
   display: none;
 }
 
@@ -1251,13 +1253,17 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
 }
 
-.catalog-item figure:hover img {
+.catalog-item figure:hover img,
+.catalog-item figure:focus img {
   opacity: 0.7;
 }
 
-.catalog-item figure:hover .button-hover {
+.catalog-item figure:hover .button-hover,
+.catalog-item figure:focus .button-hover {
   display: block;
 }
 
@@ -1403,6 +1409,40 @@ a {
 
 .catalog-footer__page:active {
   opacity: 1;
+}
+
+.button-wrapper button{
+  height: 18px;
+  width: 18px;
+
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.button-wrapper button {
+  background-image: url(../img/svg/icon-down-dir.svg);
+}
+
+.button-wrapper .button--up {
+  position: relative;
+  overflow: hidden;
+
+  transform: rotate(180deg);
+  opacity: 0.2;
+}
+
+.button-wrapper button:hover,
+.button-wrapper button:focus {
+  opacity: 0.4;
+}
+
+.button-wrapper button:active {
+  opacity: 1;
+  border: none;
 }
 
 .button-hover {
@@ -1585,11 +1625,23 @@ a {
 }
 
 .price-controls input {
-  border: none;
   width: 60px;
+  
+  border: none;
   background-color: var(--color-light-gray);
 
   font-size: inherit;
+
+  -moz-appearance:textfield;
+}
+
+.price-controls input::-webkit-outer-spin-button,
+.price-controls input::-webkit-inner-spin-button {
+  margin: 0;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .range-controls .toggle-max {
