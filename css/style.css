@@ -387,6 +387,10 @@ a {
   background-repeat: no-repeat;
 }
 
+.user-menu__link--footer {
+  padding-left: 20px;
+}
+
 .user-list__item:first-child .user-menu__link--footer::before {
   background-image: url(../img/svg/footer/icon_user.svg);
 }
@@ -726,7 +730,7 @@ a {
   content: "";
 
   width: 100px;
-  height: 7px;
+  height: 13px;
 
   position: absolute;
   top: 0;
@@ -753,8 +757,8 @@ a {
 .slider-content__title {
   margin: 0;
   padding: 0;
-  margin-top: 58px;
-  margin-bottom: 25px;
+  margin-top: 65px;
+  margin-bottom: 27px;
 
   font-family: var(--gilroy-bold);
   font-size: 47px;
@@ -762,7 +766,11 @@ a {
 }
 
 .slider-content__subtitle {
-  margin-bottom: 32px;
+  margin-bottom: 50px;
+
+  font-family: var(--open-sans);
+  font-style: normal;
+  font-weight: 300;
 }
 
 .slider-table {
@@ -900,6 +908,10 @@ a {
 
 .popular-list__title:nth-child(4) {
   letter-spacing: 0.04em;
+}
+
+.popular-list__title--min {
+  letter-spacing: 0.01em;
 }
 
 .popular-list__wrap {
@@ -1082,13 +1094,13 @@ a {
 
 /* ========  About ======== */
 .about {
-  max-width: 478px;
+  max-width: 495px;
 }
 
 .about__list {
   padding: 0;
   margin: 0;
-  margin-top: -8px;
+  margin-top: 60px;
   margin-bottom: 67px;
 
   list-style-type: none;
@@ -1233,7 +1245,7 @@ a {
 /* ========  Footer Logo ======== */
 .footer-nav {
   margin: 0;
-  margin-left: -45px;
+  margin-left: -35px;
   padding: 0;
 
   display: -webkit-box;
@@ -1295,6 +1307,10 @@ a {
 .info__adress {
   margin: 0;
 
+  font-family: var(--open-sans);
+  font-weight: 300;
+  font-size: 15px;
+  font-style: normal;
   color: var(--white-70);
 }
 
@@ -1399,7 +1415,7 @@ a {
 .catalog-header {
   height: 70px;
   width: 100%;
-  padding-left: 75px;
+  padding-left: 73px;
 
   display: -webkit-box;
 
@@ -1417,7 +1433,6 @@ a {
 }
 
 .catalog-title {
-  padding-top: 2px;
 
   position: relative;
 
@@ -1458,7 +1473,8 @@ a {
 }
 
 .catalog-header__title {
-  margin-right: 73px;
+  margin-top: 10px;
+  margin-right: 75px;
 
   font-size: 16px;
   line-height: 20px;
@@ -1472,7 +1488,7 @@ a {
 
 .catalog-item figure {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
   padding: 0;
 
   position: relative;

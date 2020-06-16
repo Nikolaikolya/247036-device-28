@@ -18,6 +18,7 @@ let servicesSliderItem = document.querySelectorAll(".services-list__item");
 let contactsLink = document.querySelector(".contacts__link");
 let contactsButtonWrite = document.querySelector(".contacts .button--big");
 
+
 // Show slider for block services
 for (let i = 0; i <= servicesSliderItem.length - 1; i++) {
   toggleClassButton(servicesButton, "button--current");
