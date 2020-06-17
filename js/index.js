@@ -8,9 +8,7 @@ let inputName = document.querySelector(".input-name");
 let formWrite = document.querySelector(".form-write");
 let poupMapClose = document.querySelector(".popup__map .popup-button");
 let searchInput = document.querySelector(".search-input");
-let buttonSliderIndex = document.querySelectorAll(
-  ".slider-control__item button"
-);
+let buttonSliderIndex = document.querySelectorAll(".slider-control__item button");
 let sliderList = document.querySelector(".slider-list");
 let sliderListItem = document.querySelectorAll(".slider-list > li");
 let servicesButton = document.querySelectorAll(".services-button button");
@@ -19,22 +17,8 @@ let contactsLink = document.querySelector(".contacts__link");
 let contactsButtonWrite = document.querySelector(".contacts .button--big");
 
 
-// Show slider for block services
-for (let i = 0; i <= servicesSliderItem.length - 1; i++) {
-  toggleClassButton(servicesButton, "button--current");
-  servicesButton[i].addEventListener("click", function (event) {
-    servicesButton[i].classList.add("button--current");
-    if (servicesButton[i].classList.contains("button--current")) {
-      toggleSliderServices(
-        servicesSliderItem[i],
-        "services-list__item--current"
-      );
-    }
-  });
-}
-
 function toggleClassButton(array, elementClass) {
-  array.forEach(function (element, index) {
+  array.forEach(function (element) {
     element.addEventListener("click", function () {
       if (!element.classList.contains(elementClass)) {
         for (let i = 0; i <= array.length - 1; i++) {
@@ -47,46 +31,40 @@ function toggleClassButton(array, elementClass) {
 }
 
 function toggleSliderServices(element, className) {
-  servicesSliderItem.forEach((elem, index) => {
+  servicesSliderItem.forEach((elem) => {
     elem.classList.remove(className);
   });
 
   element.classList.add(className);
 }
 
-// End show slider for block services
+function toggleClass(array, element, className){
+  for(let i = 0; i <= array.length - 1; i++) {
+    array[i].classList.remove(className);
+  }
+  element.classList.add(className);
+}
 
-// Test
-buttonSliderIndex.forEach(function (element, index) {
-  element.addEventListener("click", function (event) {
-    if (index == 0) {
-      sliderListItem[1].classList.add("slider-none");
-      sliderListItem[1].classList.remove("slider-list__item");
-      sliderListItem[2].classList.add("slider-none");
-      sliderListItem[2].classList.remove("slider-list__item");
-      sliderListItem[0].classList.toggle("slider-list__item");
-      element.classList.toggle("active");
-      buttonSliderIndex[1].classList.remove("active");
-      buttonSliderIndex[2].classList.remove("active");
-    } else if (index == 1) {
-      sliderListItem[0].classList.add("slider-none");
-      sliderListItem[0].classList.remove("slider-list__item");
-      sliderListItem[2].classList.add("slider-none");
-      sliderListItem[2].classList.remove("slider-list__item");
-      sliderListItem[1].classList.toggle("slider-list__item");
-      element.classList.toggle("active");
-      buttonSliderIndex[0].classList.remove("active");
-      buttonSliderIndex[2].classList.remove("active");
-    } else if (index == 2) {
-      sliderListItem[1].classList.add("slider-none");
-      sliderListItem[1].classList.remove("slider-list__item");
-      sliderListItem[0].classList.add("slider-none");
-      sliderListItem[0].classList.remove("slider-list__item");
-      sliderListItem[2].classList.toggle("slider-list__item");
-      element.classList.toggle("active");
-      buttonSliderIndex[0].classList.remove("active");
-      buttonSliderIndex[1].classList.remove("active");
+// Show slider for block services
+for (let i = 0; i <= servicesSliderItem.length - 1; i++) {
+  toggleClassButton(servicesButton, "button--current");
+  servicesButton[i].addEventListener("click", function () {
+    servicesButton[i].classList.add("button--current");
+    if (servicesButton[i].classList.contains("button--current")) {
+      toggleSliderServices(
+        servicesSliderItem[i],
+        "services-list__item--current"
+      );
     }
+  });
+}
+
+// End show slider for block services slider-none slider-list__item active
+buttonSliderIndex.forEach(function (element, index) {
+  element.addEventListener('click', function() {
+    toggleClass(buttonSliderIndex, element, 'active');
+    toggleClass(sliderListItem, sliderListItem[index], 'slider-list__item');
+    sliderListItem[index].classList.add('slider-list__item');
   });
 });
 
