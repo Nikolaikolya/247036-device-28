@@ -35,7 +35,7 @@ catalogMenu.addEventListener("mouseout", function (event) {
 // Show border search panel
 searchButton.addEventListener(
   "focus",
-  (event) => {
+  function() {
     searchForm.style.borderColor = "#000000";
     searchButton.style.opacity = "1";
   },
