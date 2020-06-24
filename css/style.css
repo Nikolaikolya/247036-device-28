@@ -1,22 +1,22 @@
 /* ========  Font ======== */
 @font-face {
   font-family: "Open Sans";
-  src: url("fonts/web/opensans.woff2") format("woff2"),
-    url("fonts/web/opensans.woff2") format("woff");
+  src: url("/fonts/web/opensans.woff2") format("woff2"),
+    url("/fonts/web/opensans.woff2") format("woff");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Gilroy Bold";
-  src: url("fonts/web/gilroyextrabold.woff2") format("woff2"),
-    url("fonts/web/gilroyextrabold.woff") format("woff");
+  src: url("/fonts/web/gilroyextrabold.woff2") format("woff2"),
+    url("/fonts/web/gilroyextrabold.woff") format("woff");
   font-weight: 800;
 }
 
 @font-face {
   font-family: "Gilroy Light";
-  src: url("fonts/web/gilroylight.woff2") format("woff2"),
-    url("fonts/web/gilroylight.woff") format("woff");
+  src: url("/fonts/web/gilroylight.woff2") format("woff2"),
+    url("/fonts/web/gilroylight.woff") format("woff");
   font-weight: 300;
 }
 
@@ -1222,10 +1222,11 @@ a {
 /* ========  Catalog
 =================================== */
 .background-header {
+  min-width: 1240px;
   background: linear-gradient(
     to right,
     var(--color-superMedium-gray) 50%,
-    var(--color-light-gray) 50%
+    var(--color-light-gray) 50% 100%
   );
 }
 
@@ -1238,8 +1239,9 @@ a {
 }
 
 .wrapper-content {
-  width: 1160px;
+  width: 1240px;
   margin: 0 auto;
+  padding: 0 40px;
 
   display: flex;
   justify-content: space-between;
@@ -1533,10 +1535,9 @@ a {
 
 /* ========  Main ======== */
 .main-container {
-  width: 1160px;
+  width: 1240px;
   margin: 0 auto;
-
-  padding-left: 60px;
+  padding: 0 40px;
 }
 
 /* ========  Link Add Catalog ======== */
@@ -1556,6 +1557,10 @@ a {
 }
 
 /* ========  Main ======== */
+.main {
+  min-width: 1160px;
+}
+
 .main__title {
   font-size: 47px;
   font-family: var(--gilroy-bold);
@@ -1563,6 +1568,7 @@ a {
 
   margin-bottom: 30px;
   margin-top: 44px;
+  padding-left: 60px;
 }
 
 /* ========  Main Filter ======== */
@@ -1810,6 +1816,7 @@ a {
 .main-bradcrams {
   padding: 0;
   margin-bottom: 50px;
+  padding-left: 60px;
 
   display: flex;
   flex-wrap: wrap;
