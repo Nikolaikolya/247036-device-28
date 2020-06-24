@@ -428,12 +428,10 @@ a {
 
 .nav__item:last-child {
   flex-grow: 1;
-
-  text-align: right;
 }
 
-.nav__item:last-child .nav__link {
-  padding-left: 15px;
+.nav__item {
+  text-align: right;
 }
 
 .nav__list {
@@ -542,7 +540,6 @@ a {
 
 .menu-list li {
   display: inline-block;
-  vertical-align: left;
   margin-bottom: 10px;
 
   flex-basis: 20%;
